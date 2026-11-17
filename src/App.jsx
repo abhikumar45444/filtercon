@@ -28,6 +28,7 @@ export default function App() {
   ])
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [showConsultation, setShowConsultation] = useState(false)
+  const [showProfile, setShowProfile] = useState(false)
   const [selectedLocation, setSelectedLocation] = useState('San Diego (Downtown)')
   const [showLocationModal, setShowLocationModal] = useState(false)
 
@@ -68,6 +69,20 @@ export default function App() {
     )
   }
 
+  if (showProfile) {
+    return (
+      <PhoneShell>
+        <ProfileScreen
+          onBack={() => setShowProfile(false)}
+          onOpenConsultation={() => {
+            setShowProfile(false)
+            setShowConsultation(true)
+          }}
+        />
+      </PhoneShell>
+    )
+  }
+
   const isModalOpen = !!selectedProduct || showLocationModal
 
   return (
@@ -83,6 +98,7 @@ export default function App() {
               onOpenShop={() => setActiveTab('categories')}
               onOpenDiagnostic={() => setActiveTab('diagnostic')}
               onOpenConsultation={() => setShowConsultation(true)}
+              onOpenProfile={() => setShowProfile(true)}
               onSelectProduct={setSelectedProduct}
               selectedLocation={selectedLocation}
               onOpenLocation={() => setShowLocationModal(true)}
@@ -116,12 +132,6 @@ export default function App() {
                 setActiveTab('categories')
                 setSelectedProduct(p)
               }}
-            />
-          )}
-
-          {(activeTab === 'profile' || activeTab === 'account') && (
-            <ProfileScreen
-              onOpenConsultation={() => setShowConsultation(true)}
             />
           )}
         </div>

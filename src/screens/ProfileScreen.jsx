@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import {
   Bell, CheckCircle2, ChevronRight, MapPin, Wrench,
-  Shield, Globe, Phone, Star, Droplets, Check
+  Shield, Globe, Phone, Star, Droplets, Check, ArrowLeft
 } from 'lucide-react'
 
-export default function ProfileScreen({ onOpenConsultation }) {
+export default function ProfileScreen({ onOpenConsultation, onBack }) {
   const [language, setLanguage] = useState('en')
   const [testKitRequested, setTestKitRequested] = useState(false)
   const [notificationBellCount, setNotificationBellCount] = useState(1)
@@ -16,11 +16,22 @@ export default function ProfileScreen({ onOpenConsultation }) {
 
   return (
     <div className="flex-1 flex flex-col bg-[#F8FAFC] pb-24 font-sans select-none overflow-y-auto no-scrollbar scrollbar-hide">
-      {/* 1. Header: Bold title "Filtercon Customer Profile", bell and solid blue "FC" avatar */}
+      {/* 1. Header: Back button (if onBack provided), Bold title "Filtercon Customer Profile", bell and solid blue "FC" avatar */}
       <div className="px-5 pt-12 pb-3.5 flex items-center justify-between bg-white border-b border-slate-100">
-        <h2 className="text-base font-extrabold text-[#0F172A] tracking-tight">
-          Filtercon Customer Profile
-        </h2>
+        <div className="flex items-center gap-2.5 min-w-0">
+          {onBack && (
+            <button
+              onClick={onBack}
+              className="w-8 h-8 rounded-full bg-slate-50 border border-slate-200/80 shadow-xs flex items-center justify-center text-slate-700 hover:bg-slate-100 active:scale-95 transition-all cursor-pointer flex-shrink-0"
+              aria-label="Back to Home"
+            >
+              <ArrowLeft className="w-4 h-4 text-slate-700" />
+            </button>
+          )}
+          <h2 className="text-base font-extrabold text-[#0F172A] tracking-tight truncate">
+            Filtercon Customer Profile
+          </h2>
+        </div>
 
         <div className="flex items-center gap-2.5">
           {/* Circular notification bell */}

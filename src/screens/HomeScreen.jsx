@@ -11,6 +11,7 @@ export default function HomeScreen({
   onOpenShop,
   onOpenDiagnostic,
   onOpenConsultation,
+  onOpenProfile,
   onSelectProduct,
   selectedLocation = 'San Diego (Downtown)',
   onOpenLocation,
@@ -151,9 +152,14 @@ export default function HomeScreen({
                 <span className="w-2 h-2 rounded-full bg-[#0284C7] absolute top-2 right-2 ring-1.5 ring-black" />
               )}
             </button>
-            <div className="w-9 h-9 rounded-full bg-[#0284C7] flex items-center justify-center text-white font-black text-xs shadow-md border border-white/30 cursor-pointer">
+            <button
+              onClick={onOpenProfile}
+              className="w-9 h-9 rounded-full bg-[#0088CC] hover:bg-[#0077b3] active:scale-95 transition-all flex items-center justify-center text-white font-black text-xs shadow-md border border-white/30 cursor-pointer"
+              aria-label="Customer Profile"
+              title="Customer Profile"
+            >
               FC
-            </div>
+            </button>
           </div>
         </div>
 
