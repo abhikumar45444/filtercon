@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #F8FAFC;
+    color: #0F172A;
+    overscroll-behavior: none;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar,
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .no-scrollbar::-webkit-scrollbar,
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, mobile WebKit */
+    width: 0px;
+    height: 0px;
+    background: transparent;
+  }
+  .safe-pb {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+/* Global scrollbar suppression across app containers */
+.no-scrollbar,
+.scrollbar-hide,
+main,
+[data-scrollable] {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-hide::-webkit-scrollbar,
+main::-webkit-scrollbar,
+[data-scrollable]::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
