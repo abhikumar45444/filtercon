@@ -34,7 +34,7 @@ export default function CategoriesScreen({ onSelectProduct, onAddToCart }) {
   return (
     <div className="flex-1 flex flex-col bg-[#F8FAFC] pb-6 font-sans select-none">
       {/* 1. Header: Bold title "Filtration Systems" & subtitle on left; "Sort: Popular v" on right */}
-      <div className="px-5 pt-12 pb-3 bg-white border-b border-slate-100 flex items-center justify-between">
+      <div className="px-5 pt-3.5 md:pt-12 pb-3 bg-white border-b border-slate-100 flex items-center justify-between">
         <div>
           <h2 className="text-lg font-black text-[#0F172A] leading-tight">
             Filtration Systems

@@ -47,7 +47,7 @@ export default function ConsultationScreen({ onBack }) {
   return (
     <div className="min-h-screen bg-[#F8FAFC] max-w-md mx-auto">
       {/* Header */}
-      <div className="bg-gradient-to-b from-[#082f49] to-[#0F172A] px-5 pt-14 pb-8 relative overflow-hidden">
+      <div className="bg-gradient-to-b from-[#082f49] to-[#0F172A] px-5 pt-5 md:pt-14 pb-8 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-sky-500/10 -translate-y-12 translate-x-12" />
         <button onClick={onBack} className="relative w-8 h-8 bg-white/10 rounded-xl flex items-center justify-center mb-6">
           <ArrowLeft className="w-4 h-4 text-white" />

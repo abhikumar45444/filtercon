@@ -17,7 +17,7 @@ export default function ProfileScreen({ onOpenConsultation, onBack }) {
   return (
     <div className="flex-1 flex flex-col bg-[#F8FAFC] pb-24 font-sans select-none overflow-y-auto no-scrollbar scrollbar-hide">
       {/* 1. Header: Back button (if onBack provided), Bold title "Filtercon Customer Profile", bell and solid blue "FC" avatar */}
-      <div className="px-5 pt-12 pb-3.5 flex items-center justify-between bg-white border-b border-slate-100">
+      <div className="px-5 pt-3.5 md:pt-12 pb-3.5 flex items-center justify-between bg-white border-b border-slate-100">
         <div className="flex items-center gap-2.5 min-w-0">
           {onBack && (
             <button

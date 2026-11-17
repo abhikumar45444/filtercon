@@ -110,7 +110,7 @@ export default function HomeScreen({
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-black/85 pointer-events-none" />
 
         {/* Top Header Bar */}
-        <div className="absolute top-12 left-0 right-0 px-4 flex items-center justify-between z-20">
+        <div className="absolute top-3.5 md:top-12 left-0 right-0 px-4 flex items-center justify-between z-20">
           {/* Top-left location header button */}
           <div
             onClick={onOpenLocation}
