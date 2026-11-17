@@ -10,6 +10,7 @@ import CartScreen from './screens/CartScreen'
 import DiagnosticQuiz from './screens/DiagnosticQuiz'
 import ConsultationScreen from './screens/ConsultationScreen'
 import ProfileScreen from './screens/ProfileScreen'
+import { getAssetUrl } from './utils/assets'
 
 export default function App() {
   const [splashDone, setSplashDone] = useState(false)
@@ -22,7 +23,7 @@ export default function App() {
       tagline: 'Under-Sink 8.5+ pH Crisp Pure Water',
       price: 499,
       qty: 1,
-      image: '/ro-system.jpg',
+      image: getAssetUrl('/ro-system.jpg'),
     },
   ])
   const [selectedProduct, setSelectedProduct] = useState(null)

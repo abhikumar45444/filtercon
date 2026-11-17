@@ -5,6 +5,7 @@ import {
   ArrowRight, Droplets, ClipboardList
 } from 'lucide-react'
 import { PRODUCTS, DOCTORS, INSTALLATIONS } from '../data'
+import { getAssetUrl } from '../utils/assets'
 
 export default function HomeScreen({
   onOpenShop,
@@ -22,7 +23,7 @@ export default function HomeScreen({
   const slides = [
     {
       id: 1,
-      image: '/hero-water.jpg',
+      image: getAssetUrl('/hero-water.jpg'),
       title: 'Filtercon Pure Home',
       tagline: '5-Stage whole home water conditioning',
       badge: '100% Salt-Free Purity',
@@ -31,7 +32,7 @@ export default function HomeScreen({
     },
     {
       id: 2,
-      image: '/hero-shower.jpg',
+      image: getAssetUrl('/hero-shower.jpg'),
       title: 'Spa Stream Purity',
       tagline: 'De-chlorinated spa showers for skin & hair',
       badge: 'Zero Chlorine Vapor',
@@ -40,7 +41,7 @@ export default function HomeScreen({
     },
     {
       id: 3,
-      image: '/hero-install.jpg',
+      image: getAssetUrl('/hero-install.jpg'),
       title: 'Whole House Towers',
       tagline: 'Dual stainless steel non-chemical filtration',
       badge: 'Lifetime Tank Quality',

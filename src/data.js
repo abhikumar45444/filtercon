@@ -1,3 +1,5 @@
+import { getAssetUrl } from './utils/assets'
+
 // Product catalog data
 export const PRODUCTS = [
   {
@@ -11,8 +13,8 @@ export const PRODUCTS = [
     reviewsCount: 512,
     badge: 'Complete Home',
     isBestSeller: true,
-    image: '/whole-house.jpg',
-    gallery: ['/whole-house.jpg', '/hero-install.jpg', '/sd-install-1.jpg'],
+    image: getAssetUrl('/whole-house.jpg'),
+    gallery: [getAssetUrl('/whole-house.jpg'), getAssetUrl('/hero-install.jpg'), getAssetUrl('/sd-install-1.jpg')],
     features: [
       'The comprehensive whole-home package trusted across Southern California',
       'Both twin stainless steel polished tanks operating in seamless tandem',
@@ -42,8 +44,8 @@ export const PRODUCTS = [
     reviewsCount: 312,
     badge: 'Flagship',
     isBestSeller: true,
-    image: '/whole-house.jpg',
-    gallery: ['/whole-house.jpg', '/hero-install.jpg', '/sd-install-1.jpg'],
+    image: getAssetUrl('/whole-house.jpg'),
+    gallery: [getAssetUrl('/whole-house.jpg'), getAssetUrl('/hero-install.jpg'), getAssetUrl('/sd-install-1.jpg')],
     features: [
       'Patented Hydromagnetic Module realigns mineral polarity',
       'High Purity KDF-55 media targets chlorine and heavy metals',
@@ -77,8 +79,8 @@ export const PRODUCTS = [
     reviewsCount: 184,
     badge: 'Eco Smart',
     isBestSeller: true,
-    image: '/whole-house.jpg',
-    gallery: ['/whole-house.jpg', '/hero-water.jpg', '/sd-install-3.jpg'],
+    image: getAssetUrl('/whole-house.jpg'),
+    gallery: [getAssetUrl('/whole-house.jpg'), getAssetUrl('/hero-water.jpg'), getAssetUrl('/sd-install-3.jpg')],
     features: [
       'Zero salt, zero sodium discharge, 100% eco-friendly',
       'Transforms dissolved hardness minerals into harmless microscopic crystals',
@@ -108,8 +110,8 @@ export const PRODUCTS = [
     reviewsCount: 420,
     badge: 'Pure Tap',
     isBestSeller: true,
-    image: '/ro-system.jpg',
-    gallery: ['/ro-system.jpg', '/hero-water.jpg', '/sd-install-2.jpg'],
+    image: getAssetUrl('/ro-system.jpg'),
+    gallery: [getAssetUrl('/ro-system.jpg'), getAssetUrl('/hero-water.jpg'), getAssetUrl('/sd-install-2.jpg')],
     features: [
       '0.0001 micron Reverse Osmosis membrane removes PFAS, fluoride, lead, arsenic',
       'Post-alkaline cartridge infuses natural Calcium, Magnesium and Potassium',
@@ -141,8 +143,8 @@ export const PRODUCTS = [
     reviewsCount: 156,
     badge: 'Luxury Spa',
     isBestSeller: false,
-    image: '/shower-gold.jpg',
-    gallery: ['/shower-gold.jpg', '/hero-shower.jpg', '/sd-install-4.jpg'],
+    image: getAssetUrl('/shower-gold.jpg'),
+    gallery: [getAssetUrl('/shower-gold.jpg'), getAssetUrl('/hero-shower.jpg'), getAssetUrl('/sd-install-4.jpg')],
     features: [
       'Instantly removes 98% of harsh free chlorine that causes dry skin & brittle hair',
       'Infused with Vitamin C and negative ion tourmaline spheres for scalp health',
@@ -173,8 +175,8 @@ export const PRODUCTS = [
     reviewsCount: 98,
     badge: 'Easy Fit',
     isBestSeller: false,
-    image: '/whole-house.jpg',
-    gallery: ['/shower-gold.jpg', '/hero-shower.jpg', '/hero-water.jpg'],
+    image: getAssetUrl('/whole-house.jpg'),
+    gallery: [getAssetUrl('/shower-gold.jpg'), getAssetUrl('/hero-shower.jpg'), getAssetUrl('/hero-water.jpg')],
     features: [
       'Compact inline cartridge installs between your shower arm and existing head',
       'Multi-stage filtration with Calcium Sulfite and activated carbon',
@@ -240,7 +242,7 @@ export const DOCTORS = [
     title: 'Integrative Medicine Specialist',
     location: 'San Diego, CA',
     quote: 'Water quality is the foundation of patient health. Filtercon removes toxic chemicals and chlorine without adding sodium.',
-    image: '/doctor-drucker.jpg',
+    image: getAssetUrl('/doctor-drucker.jpg'),
     initials: 'MD',
   },
   {
@@ -248,7 +250,7 @@ export const DOCTORS = [
     title: 'Biochemist & Health Advocate',
     location: 'Southern California',
     quote: 'The hydromagnetic and catalytic carbon beds provide the cleanest chemical-free water I have ever evaluated for home use.',
-    image: '/doctor-kellas.jpg',
+    image: getAssetUrl('/doctor-kellas.jpg'),
     initials: 'WK',
   },
   {
@@ -256,7 +258,7 @@ export const DOCTORS = [
     title: 'Clinical Nutritionist & Chiropractor',
     location: 'San Diego, CA',
     quote: 'Our family and patients love Filtercon. Bathing in de-chlorinated water makes a huge difference for allergies and eczema.',
-    image: '/doctor-nelson.jpg',
+    image: getAssetUrl('/doctor-nelson.jpg'),
     initials: 'DN',
   },
 ];
@@ -265,25 +267,25 @@ export const INSTALLATIONS = [
   {
     neighborhood: 'San Diego Residence',
     system: 'Whole House 5-Stage & Salt-Free Softener',
-    image: '/sd-install-1.jpg',
+    image: getAssetUrl('/sd-install-1.jpg'),
     badge: 'Yuba Stainless Towers',
   },
   {
     neighborhood: 'Del Mar Coastal Home',
     system: 'Fluoride & Chemical Removal System',
-    image: '/sd-install-2.jpg',
+    image: getAssetUrl('/sd-install-2.jpg'),
     badge: 'Del Mar, CA',
   },
   {
     neighborhood: 'Carlsbad Luxury Home',
     system: 'Patented Hydromagnetic Conditioner',
-    image: '/sd-install-3.jpg',
+    image: getAssetUrl('/sd-install-3.jpg'),
     badge: 'Carlsbad, CA',
   },
   {
     neighborhood: 'Encinitas Garage Install',
     system: 'Zero-Maintenance Whole Home Unit',
-    image: '/sd-install-4.jpg',
+    image: getAssetUrl('/sd-install-4.jpg'),
     badge: 'Encinitas, CA',
   },
 ];
