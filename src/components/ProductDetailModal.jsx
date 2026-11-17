@@ -3,6 +3,7 @@ import {
   Heart, X, Star, Sparkles, Wrench, ShieldCheck, Leaf,
   CheckCircle2, Phone, Calendar
 } from 'lucide-react'
+import { getAssetUrl } from '../utils/assets'
 
 export default function ProductDetailModal({
   product,
@@ -11,7 +12,7 @@ export default function ProductDetailModal({
   onOpenConsultation,
   onAddToCart
 }) {
-  const [activeImage, setActiveImage] = useState(product?.image || '/whole-house.jpg')
+  const [activeImage, setActiveImage] = useState(product?.image || getAssetUrl('/whole-house.jpg'))
   const [isWishlist, setIsWishlist] = useState(false)
   const [activeTab, setActiveTab] = useState('stages')
 
@@ -42,8 +43,8 @@ export default function ProductDetailModal({
     ? product.gallery.slice(0, 3)
     : [
         product.image,
-        product.gallery?.[1] || '/hero-water.jpg',
-        product.gallery?.[2] || '/sd-install-1.jpg'
+        product.gallery?.[1] || getAssetUrl('/hero-water.jpg'),
+        product.gallery?.[2] || getAssetUrl('/sd-install-1.jpg')
       ]
 
   // Default 5-stages if not fully provided
@@ -70,7 +71,7 @@ export default function ProductDetailModal({
 
   return (
     <div
-      className="absolute inset-0 z-50 bg-black/60 backdrop-blur-xs flex flex-col justify-end overflow-hidden animate-fade-in select-none"
+      className="fixed md:absolute inset-0 z-[100] bg-black/60 backdrop-blur-xs flex flex-col justify-end overflow-hidden animate-fade-in select-none"
       style={{ touchAction: 'none' }}
     >
       {/* 1. Lock Background Scroll: Backdrop with touch-action: none */}
@@ -80,9 +81,9 @@ export default function ProductDetailModal({
         style={{ touchAction: 'none' }}
       />
 
-      {/* 3. Anchor Modal Sheet: Pinned flush to bottom (bottom-0, max-height: 92vh) with flex-column layout */}
+      {/* 3. Anchor Modal Sheet: Pinned flush to bottom with flex-column layout */}
       <div
-        className="w-full bg-white rounded-t-[36px] max-h-[92vh] md:max-h-[92%] h-[92vh] md:h-[92%] flex flex-col overflow-hidden shadow-2xl relative font-sans z-10 bottom-0 transition-transform duration-300"
+        className="w-full bg-white rounded-t-[36px] max-h-[92dvh] md:max-h-[92%] h-[92dvh] md:h-[92%] flex flex-col overflow-hidden shadow-2xl relative font-sans z-10 bottom-0 transition-transform duration-300"
         style={{ touchAction: 'auto' }}
       >
         {/* Top drag handle indicator (shrink-0) */}

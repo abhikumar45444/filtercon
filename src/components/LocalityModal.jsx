@@ -32,12 +32,12 @@ export default function LocalityModal({ isOpen, onClose, selectedLocality, onSel
   }
 
   return (
-    <div className="absolute inset-0 z-50 bg-black/60 backdrop-blur-xs flex flex-col justify-end overflow-hidden animate-fade-in">
+    <div className="fixed md:absolute inset-0 z-[100] bg-black/60 backdrop-blur-xs flex flex-col justify-end overflow-hidden animate-fade-in">
       {/* Backdrop click to close */}
       <div className="flex-1" onClick={onClose} />
 
       {/* Slide-up sheet */}
-      <div className="bg-white rounded-t-[36px] max-h-[92%] h-[92%] flex flex-col overflow-hidden shadow-2xl border-t border-slate-100 z-10 transition-transform duration-300">
+      <div className="w-full bg-white rounded-t-[36px] max-h-[92dvh] md:max-h-[92%] h-[92dvh] md:h-[92%] flex flex-col overflow-hidden shadow-2xl border-t border-slate-100 z-10 transition-transform duration-300">
         {/* Top drag handle indicator */}
         <div className="w-12 h-1.5 bg-slate-200 rounded-full mx-auto my-3 flex-shrink-0" />
 

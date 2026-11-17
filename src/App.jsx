@@ -87,7 +87,7 @@ export default function App() {
 
   return (
     <PhoneShell isLocked={isModalOpen}>
-      <div className="flex flex-col flex-1 relative h-full">
+      <div className="flex flex-col flex-1 relative h-full overflow-hidden">
         <div
           className={`flex-1 ${
             isModalOpen ? 'overflow-hidden' : 'overflow-y-auto'

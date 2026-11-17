@@ -5,16 +5,16 @@
  */
 export default function PhoneShell({ children, isLocked = false }) {
   return (
-    <div className="min-h-screen min-h-[100dvh] w-full bg-[#F8FAFC] md:bg-gradient-to-br md:from-[#E2E8F0] md:via-[#EDF2F7] md:to-[#E2E8F0] flex items-center justify-center p-0 md:py-8 md:px-4 text-slate-900 select-none">
+    <div className="h-screen h-[100dvh] w-full bg-[#F8FAFC] md:bg-gradient-to-br md:from-[#E2E8F0] md:via-[#EDF2F7] md:to-[#E2E8F0] flex items-center justify-center p-0 md:py-8 md:px-4 text-slate-900 select-none overflow-hidden">
       {/* Phone chassis: only styled as a device on desktop (md:) */}
       <div className="
         w-full md:w-[414px]
-        h-full min-h-screen min-h-[100dvh] md:min-h-0 md:h-[868px]
+        h-full md:h-[868px]
         bg-[#F8FAFC] md:bg-[#1E293B]
         rounded-none md:rounded-[56px]
         p-0 md:p-[12px]
         shadow-none md:shadow-[0_30px_70px_-20px_rgba(15,23,42,0.35),0_0_0_1px_rgba(255,255,255,0.4),0_0_0_3px_#334155]
-        relative flex flex-col overflow-hidden transition-all duration-300
+        relative flex flex-col overflow-hidden
       ">
         {/* Left side physical buttons — only on desktop mockup */}
         <div className="hidden md:block absolute -left-[14px] top-28 w-[5px] h-8 bg-slate-600 rounded-l-sm shadow-xs" />
